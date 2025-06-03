@@ -1,69 +1,77 @@
-body {
-  font-family: Montserrat, sans-serif;
-  padding: 20px;
-  color: #2e2f42;
+/* Секція контейнера */
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 40px;
 }
 
-/* Контейнер інпуту та кнопки */
-.controls {
+/* Інпут і кнопка */
+.datetime-wrapper {
   display: flex;
   gap: 8px;
-  margin-bottom: 32px;
 }
 
 /* Інпут */
-#datetime-picker {
+.datetime-input {
   width: 272px;
   height: 40px;
-  padding: 8px 16px;
+  flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #808080;
+  color: #2E2F42;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.64px;
-  color: #2e2f42;
-  background-color: #fff;
+  padding: 0 16px;
 }
 
-#datetime-picker:hover {
-  border-color: #000;
+.datetime-input:hover {
+  border: 1px solid #000;
 }
 
-#datetime-picker:focus {
-  border-color: #4e75ff;
+.datetime-input:focus {
+  border: 1px solid #4E75FF;
   outline: none;
-  color: #000;
 }
 
-#datetime-picker:disabled {
+.datetime-input:disabled {
+  background: #FAFAFA;
   border: 1px solid #808080;
   color: #808080;
-  background: #fafafa;
 }
 
 /* Кнопка */
-button[data-start] {
+.start-btn {
+  display: inline-flex;
   padding: 8px 16px;
-  border: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   border-radius: 8px;
+  background: #4E75FF;
+  color: #FFF;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.64px;
+  border: none;
   cursor: pointer;
-  color: #fff;
-  background-color: #4e75ff;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-button[data-start]:hover:not(:disabled) {
-  background-color: #6c8cff;
+.start-btn:hover:not(:disabled) {
+  background: #6C8CFF;
 }
 
-button[data-start]:disabled {
+.start-btn:disabled {
+  background: #CFCFCF;
   color: #989898;
-  background-color: #cfcfcf;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 /* Таймер */
@@ -78,12 +86,18 @@ button[data-start]:disabled {
 }
 
 .value {
+  color: #2E2F42;
+  font-family: Montserrat, sans-serif;
   font-size: 40px;
+  font-weight: 400;
   line-height: 48px;
   letter-spacing: 1.6px;
 }
 
 .label {
+  color: #2E2F42;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
 }
