@@ -50,6 +50,7 @@ startBtn.addEventListener('click', () => {
       clearInterval(timerId);
       updateTimer({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       dateInput.disabled = false;
+      startBtn.disabled = false;
       return;
     }
 
